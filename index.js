@@ -35,7 +35,8 @@ onValue(moviesInDB, function(snapshot){
             
         })
     }else{
-        unorderList.innerHTML = "No items here .... "
+        
+        unorderList.innerHTML = "<li>No items here .... </li>"
     }
 
 })
