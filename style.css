@@ -43,7 +43,7 @@ button:hover{
 }
 .container{
     
-    border: 1px solid black;
+    /* border: 1px solid black; */
     display: flex;
     flex-direction: column;
     max-width: 430px;
@@ -62,12 +62,13 @@ ul{
     gap: 10px;
 }
 ul li{
-    list-style: none;
+    display: flex;
+    flex-grow: 1;
+    list-style: none ;
     background-color: #f3f3f3;
     color:  #AC485A;
     font-size: 20px;
     padding: 15px;
-    /* flex-grow: 1; */
     border: 8px ;
     border-radius: 8px;
     text-align: center;
