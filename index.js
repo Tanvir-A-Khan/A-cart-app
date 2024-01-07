@@ -58,16 +58,29 @@ const addButtonEl = document.getElementById("add-button")
 const unorderList = document.getElementById("shoppingCart")
 
 
-addButtonEl.addEventListener("click", function(){
-
+function appendItem(){
     const inputValue = inputFieldEl.value;
 
     if(inputValue != ""){
         push(moviesInDB, inputValue)
     }
     inputFieldEl.value = ""
+}
 
+addButtonEl.addEventListener("click", function(){
+    appendItem();
 })
+
+
+inputFieldEl.addEventListener("keypress", function(event) {
+    
+    if (event.key === "Enter") {
+    
+      event.preventDefault();
+    
+      appendItem();
+    }
+  });
 
 function appendItems(item){
     unorderList.innerHTML += `<li>${item}</li>`
